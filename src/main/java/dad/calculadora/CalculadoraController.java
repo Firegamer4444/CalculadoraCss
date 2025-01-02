@@ -139,4 +139,17 @@ public class CalculadoraController implements Initializable {
         calculadora.insertar('0');
     }
 
+    @FXML
+    void onChangeThemeAction(ActionEvent event) {
+        if (root.getStylesheets().getFirst().equals(String.valueOf(getClass().getResource("/css/calculadoraClasica.css")))){
+            root.getStylesheets().setAll(String.valueOf(getClass().getResource("/css/calculadoraModerna.css")));
+        }
+        else {
+            root.getStylesheets().setAll(String.valueOf(getClass().getResource("/css/calculadoraClasica.css")));
+        }
+
+    }
+
 }
+
+
